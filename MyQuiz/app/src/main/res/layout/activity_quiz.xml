@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuizActivity"
+    android:padding="16dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/question_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="Question: 1/5"
+        android:textAlignment="textStart"
+        android:textColor="#732aad"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+
+        />
+
+    <TextView
+        android:id="@+id/question_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="Q.1: Who is founder of Pakistan?"
+        android:textAlignment="textStart"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"
+
+        />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <RadioButton
+        android:id="@+id/q1option1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Allama Muhammad Iqbal"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColorHighlight="@color/bgColor"
+        android:onClick="onRadioButtonClicked"
+        android:buttonTint="@color/bgColor"/>
+
+
+    <RadioButton
+        android:id="@+id/q1option2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Qaid-e-Azam Muhammad Ali Jinnah"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:onClick="onRadioButtonClicked"
+        android:buttonTint="@color/bgColor"/>
+
+    <RadioButton
+        android:id="@+id/q1option3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Liaquat Ali Khan"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:onClick="onRadioButtonClicked"
+        android:buttonTint="@color/bgColor"/>
+
+    <RadioButton
+        android:id="@+id/q1option4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sir Syed Ahmed Khan"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:onClick="onRadioButtonClicked"
+        android:buttonTint="@color/bgColor"/>
+
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/next_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NEXT"
+        android:layout_marginTop="50dp" />
+
+</LinearLayout>
