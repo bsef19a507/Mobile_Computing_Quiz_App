@@ -12,30 +12,80 @@ import android.widget.Toast;
 
 public class QuizActivity extends AppCompatActivity {
 
+    public String[] questions = {"Who was the first President of the Constituent Assembly of Pakistan?", "After how many years Pakistan got its first constitution?","What document was firstly drafted to give pace to constitution making process?"};
+    public String[][] answers = {
+            {"Liaquat Ali Khan","Quaid-e-Azam","Moulvi Tameez-ud-Din","Sardar Abdur Rab Nishtar"},
+            {"5 years","7 years","9 years","11 years"},
+            {"Representative Act","Pakistan Act","Independence Act","Objective Resolution"}
+    } ;
+
+    public int totalQuestions = questions.length;
+    public int questionIndex = 0;
+    public int questionCount = questionIndex+1;
+    public int optionCount = 0;
+    public int option1 = optionCount;
+    public int option2 = option1+1;
+    public int option3 = option2+1;
+    public int option4 =  option3+1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
+
+
+        TextView qCount = findViewById(R.id.question_count);
+        qCount.setText(questionCount+"/"+totalQuestions);
+
+        TextView question = findViewById(R.id.question);
+        question.setText("Q."+questionCount+":"+questions[questionIndex]);
+
+        RadioButton opt1 = findViewById(R.id.q1option1);
+        opt1.setText(answers[questionIndex][option1]);
+
+        RadioButton opt2 = findViewById(R.id.q1option2);
+        opt2.setText(answers[questionIndex][option2]);
+
+        RadioButton opt3 = findViewById(R.id.q1option3);
+        opt3.setText(answers[questionIndex][option3]);
+
+        RadioButton opt4 = findViewById(R.id.q1option4);
+        opt4.setText(answers[questionIndex][option4]);
+
+
+
 
         Button btn_nxt = findViewById(R.id.next_btn);
 
         btn_nxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                TextView question = findViewById(R.id.question);
-                question.setText("Q.2: After how many years Pakistan got its first constitution?");
 
-                RadioButton opt1 = findViewById(R.id.q1option1);
-                opt1.setText(" 5 years");
 
-                RadioButton opt2 = findViewById(R.id.q1option2);
-                opt2.setText(" 7 years");
+               questionIndex = questionIndex + 1 ;
+                questionCount =  questionCount+1;
 
-                RadioButton opt3 = findViewById(R.id.q1option3);
-                opt3.setText(" 9 years");
+               if(questionIndex<totalQuestions) {
 
-                RadioButton opt4 = findViewById(R.id.q1option4);
-                opt4.setText(" 11 years");
+                   qCount.setText(questionCount+"/"+totalQuestions);
+
+
+                   question.setText("Q."+questionCount+":"+questions[questionIndex]);
+
+                   opt1.setText(answers[questionIndex][option1]);
+
+
+                   opt2.setText(answers[questionIndex][option2]);
+
+
+                   opt3.setText(answers[questionIndex][option3]);
+
+                   opt4.setText(answers[questionIndex][option4]);
+
+               }else{
+                   btn_nxt.setText("Submit");
+               }
+
             }
         });
     }
