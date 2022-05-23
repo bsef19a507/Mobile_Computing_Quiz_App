@@ -28,11 +28,23 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     private void nextQuestion(){
-        Intent intent = new Intent(QuizActivity.this, QuizActivity.class);
+        Intent intent = new Intent(this, QuizActivity.class);
         startActivity(intent);
 
         TextView question = findViewById(R.id.question);
         question.setText("Q.2: After how many years Pakistan got its first constitution?");
+
+        RadioButton opt1 = findViewById(R.id.q1option1);
+        opt1.setText(" 5 years");
+
+        RadioButton opt2 = findViewById(R.id.q1option2);
+        opt2.setText(" 7 years");
+
+        RadioButton opt3 = findViewById(R.id.q1option3);
+        opt3.setText(" 9 years");
+
+        RadioButton opt4 = findViewById(R.id.q1option4);
+        opt4.setText(" 11 years");
     }
 
 
