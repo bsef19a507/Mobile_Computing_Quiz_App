@@ -14,6 +14,8 @@ import java.util.ArrayList;
 
 public class QuizActivity extends AppCompatActivity {
 
+    ArrayList<String> selected_ans = new ArrayList<String>();
+
     public String[] questions = {"Who was the first President of the Constituent Assembly of Pakistan?",
             "After how many years Pakistan got its first constitution?","What document was firstly drafted to give pace to constitution making process?",
             "When the Constituent Assembly passed the Objective Resolution?","When Mohammad Ali Bogra presented Bogra Formula in the assembly?",
@@ -47,7 +49,17 @@ public class QuizActivity extends AppCompatActivity {
         setContentView(R.layout.activity_quiz);
 
 
-
+        ArrayList<String> ans_list = new ArrayList<String>();
+        ans_list.add("Quaid-e-Azam");
+        ans_list.add("9 years");
+        ans_list.add("Objective Resolution");
+        ans_list.add("12th March 1949");
+        ans_list.add("October 1953");
+        ans_list.add("Prime Minister");
+        ans_list.add("Constitutional Formula");
+        ans_list.add("23rd March 1956");
+        ans_list.add("Choudhry Mohammad Ali");
+        ans_list.add("Islamic Republic of Pakistan");
 
         TextView qCount = findViewById(R.id.question_count);
         qCount.setText(questionCount+"/"+totalQuestions);
@@ -82,6 +94,7 @@ public class QuizActivity extends AppCompatActivity {
 
                if(questionIndex<totalQuestions) {
 
+
                    qCount.setText(questionCount+"/"+totalQuestions);
 
 
@@ -98,7 +111,18 @@ public class QuizActivity extends AppCompatActivity {
                    opt4.setText(answers[questionIndex][option4]);
 
                }else{
-                   btn_nxt.setText("Submit");
+                   selected_ans.retainAll(ans_list);
+
+                   btn_nxt.setText("submit");
+                   String btnText = btn_nxt.getText().toString();
+                   if(btnText.equals("submit")){
+                       String correct = String.valueOf(selected_ans.size());
+                       String totalQ = String.valueOf(ans_list.size());
+                       String result = correct+"/"+totalQ;
+                       Intent intent = new Intent(QuizActivity.this, SubmitActivity.class);
+                       intent.putExtra("result",result);
+                       startActivity(intent);
+                   }
                }
 
             }
@@ -112,26 +136,41 @@ public class QuizActivity extends AppCompatActivity {
 
 
     public void onRadioButtonClicked(View view){
+
+
+
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
 
         // Check which radio button was clicked
         switch(view.getId()) {
             case R.id.q1option1:
-                if (checked)
-                    // wrong
-                    break;
+                if (checked){
+                        String ans = "";
+                        ans = ((RadioButton) view).getText().toString();
+                        selected_ans.add(ans);
+                }
+                break;
             case R.id.q1option2:
-                if (checked)
-                    // true
+                if (checked){
+                    String ans = "";
+                    ans = ((RadioButton) view).getText().toString();
+                    selected_ans.add(ans);
+                }
                     break;
             case R.id.q1option3:
-                if (checked)
-                    // wrong
+                if (checked){
+                    String ans = "";
+                    ans = ((RadioButton) view).getText().toString();
+                    selected_ans.add(ans);
+                }
                     break;
             case R.id.q1option4:
-                if (checked)
-                    // wrong
+                if (checked){
+                    String ans = "";
+                    ans = ((RadioButton) view).getText().toString();
+                    selected_ans.add(ans);
+                }
                     break;
         }
     }
