@@ -18,7 +18,7 @@ public class QuizActivity extends AppCompatActivity {
             "After how many years Pakistan got its first constitution?","What document was firstly drafted to give pace to constitution making process?",
             "When the Constituent Assembly passed the Objective Resolution?","When Mohammad Ali Bogra presented Bogra Formula in the assembly?",
             "Who was Mohammad Ali Bogra?","What is the other name of Mohammad Ali Bogra Formula?", "When first constitution of Pakistan was enforced?",
-    "Who was the Prime Minister of Pakistan during enforcement of first constitution?"};
+    "Who was the Prime Minister of Pakistan during enforcement of first constitution?","What official name was given to Pakistan in 1956 constitution?"};
     public String[][] answers = {
             {"Liaquat Ali Khan","Quaid-e-Azam","Moulvi Tameez-ud-Din","Sardar Abdur Rab Nishtar"},
             {"5 years","7 years","9 years","11 years"},
@@ -28,7 +28,8 @@ public class QuizActivity extends AppCompatActivity {
             {"Prime Minister","Foreign Minister","Law Minister","Parliament Minister"},
             {"New Law of Pakistan","Pakistan Report","Third Report","Constitutional Formula"},
             {"8th June 1956","23rd March 1956","14th August 1956","25th December 1956"},
-            {"Mohammad Ali Bogra","Khwaja Nazim Uddin","Choudhry Mohammad Ali","Ibrahim Ismail Chundrigar"}
+            {"Mohammad Ali Bogra","Khwaja Nazim Uddin","Choudhry Mohammad Ali","Ibrahim Ismail Chundrigar"},
+            {"United States of Pakistan","Republic of Pakistan","Islamic Pakistan","Islamic Republic of Pakistan"}
     } ;
 
     public int totalQuestions = questions.length;
