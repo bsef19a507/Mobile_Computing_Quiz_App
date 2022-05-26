@@ -15,7 +15,7 @@ public class QuizActivity extends AppCompatActivity {
     public String[] questions = {"Who was the first President of the Constituent Assembly of Pakistan?",
             "After how many years Pakistan got its first constitution?","What document was firstly drafted to give pace to constitution making process?",
             "When the Constituent Assembly passed the Objective Resolution?","When Mohammad Ali Bogra presented Bogra Formula in the assembly?",
-            "Who was Mohammad Ali Bogra?","What is the other name of Mohammad Ali Bogra Formula?"};
+            "Who was Mohammad Ali Bogra?","What is the other name of Mohammad Ali Bogra Formula?", "When first constitution of Pakistan was enforced?"};
     public String[][] answers = {
             {"Liaquat Ali Khan","Quaid-e-Azam","Moulvi Tameez-ud-Din","Sardar Abdur Rab Nishtar"},
             {"5 years","7 years","9 years","11 years"},
@@ -23,7 +23,8 @@ public class QuizActivity extends AppCompatActivity {
             {"14th February 1949","12th March 1949","9th June 1949","15th August 1949"},
             {"January 1953","April 1953","September 1953","October 1953"},
             {"Prime Minister","Foreign Minister","Law Minister","Parliament Minister"},
-            {"New Law of Pakistan","Pakistan Report","Third Report","Constitutional Formula"}
+            {"New Law of Pakistan","Pakistan Report","Third Report","Constitutional Formula"},
+            {"8th June 1956","23rd March 1956","14th August 1956","25th December 1956"}
     } ;
 
     public int totalQuestions = questions.length;
