@@ -42,7 +42,7 @@
         android:textSize="30sp"
         android:textStyle="bold"
         android:layout_marginTop="40dp"
-        android:layout_marginBottom="40dp"
+
         />
 
     <TextView
@@ -50,12 +50,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
-        android:text="Your Score"
+        android:text="0"
         android:textAlignment="center"
         android:textColor="#097614"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:layout_marginTop="40dp"
+
         android:layout_marginBottom="40dp"
         />
 
