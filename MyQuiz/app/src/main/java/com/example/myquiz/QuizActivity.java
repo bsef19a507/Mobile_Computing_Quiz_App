@@ -117,11 +117,12 @@ public class QuizActivity extends AppCompatActivity {
                    String btnText = btn_nxt.getText().toString();
                    if(btnText.equals("submit")){
                        String correct = String.valueOf(selected_ans.size());
+                       int correctScore = Integer.parseInt(correct);
                        String totalQ = String.valueOf(ans_list.size());
                        String result = correct+"/"+totalQ;
                        Intent intent = new Intent(QuizActivity.this, SubmitActivity.class);
                        intent.putExtra("result",result);
-                       intent.putExtra("correct",correct);
+                       intent.putExtra("correct",correctScore);
                        startActivity(intent);
                    }
                }
