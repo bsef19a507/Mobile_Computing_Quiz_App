@@ -121,6 +121,7 @@ public class QuizActivity extends AppCompatActivity {
                        String result = correct+"/"+totalQ;
                        Intent intent = new Intent(QuizActivity.this, SubmitActivity.class);
                        intent.putExtra("result",result);
+                       intent.putExtra("correct",correct);
                        startActivity(intent);
                    }
                }

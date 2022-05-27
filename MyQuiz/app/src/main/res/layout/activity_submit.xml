@@ -60,11 +60,11 @@
         />
 
     <TextView
-        android:id="@+id/score"
+        android:id="@+id/compliment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
-        android:text="Execellent"
+        android:text="Excellent"
         android:textAlignment="center"
         android:textColor="#ff0099"
         android:textSize="30sp"
